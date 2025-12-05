@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptography File Encryptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1> Cryptography Application</h1>
+    <p>Encrypt & Decrypt Files Securely</p>
+
+    <div class="card">
+        <h2>Encrypt File</h2>
+        <form id="encrypt-form" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" required>
+            <button type="submit" class="btn encrypt">Encrypt</button>
+        </form>
+        <p id="enc-status"></p>
+    </div>
+
+    <div class="card">
+        <h2>Encrypted Files</h2>
+        <div id="encrypted-list" class="file-box"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
