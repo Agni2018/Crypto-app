@@ -5,5 +5,5 @@ services:
     image: agni730/jenkins-docker-demo:latest
     container_name: crypto-app
     ports:
-      - "8080:80"
+      - "8080:5000"
     restart: always
