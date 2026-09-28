@@ -1,0 +1,8 @@
+services:
+  crypto-app:
+    image: agni730/jenkins-docker-demo:${IMAGE_TAG:-latest}
+    container_name: crypto-app
+    ports:
+      - "8080:5000"
+    restart: always
+
