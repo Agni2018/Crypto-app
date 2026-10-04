@@ -1,0 +1,7 @@
+services:
+
+  crypto-app:
+    image: agni730/jenkins-docker-demo:latest
+    container_name: crypto-app-staging
+    ports:
+      - "8081:5000"
