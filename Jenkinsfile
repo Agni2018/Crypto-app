@@ -25,7 +25,7 @@ pipeline {
             }
         }
 
-        stage('Push to Docker Hub') {
+        stage('Push') {
             steps {
                 dockerPush(
                     IMAGE_NAME,
@@ -34,8 +34,14 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Production Deployment') {
+
+            when {
+                branch 'main'
+            }
+
             steps {
+                echo "This stage runs ONLY for main"
                 dockerDeploy()
             }
         }
@@ -44,11 +50,11 @@ pipeline {
     post {
 
         success {
-            echo "Pipeline completed successfully for ${env.BRANCH_NAME}"
+            echo "Pipeline completed successfully"
         }
 
         failure {
-            echo "Pipeline failed for ${env.BRANCH_NAME}"
+            echo "Pipeline failed"
         }
     }
 }
