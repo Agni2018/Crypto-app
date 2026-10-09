@@ -12,7 +12,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "jenkins-terraform"
+  default = "jenkins-ansible"
 }
 
 variable "security_group_id" {
